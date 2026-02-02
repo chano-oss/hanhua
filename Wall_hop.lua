@@ -207,7 +207,7 @@ SpeedTab:CreateSlider({
 -- ========================================
 -- INFO (sem notificações)
 -- ========================================
-local InfoTab = Window:CreateTab("Info")
+local InfoTab = Window:CreateTab("关于")
 InfoTab:CreateParagraph({
    Title = "Grok 菜单 - 自动连跳 & 自动蹭墙闪身",
    Content = [[
