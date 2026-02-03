@@ -204,6 +204,15 @@ SpeedTab:CreateSlider({
    Callback = function(v) humanoid.WalkSpeed = v end
 })
 
+local TeleportTab = Window:CreateTab("更多脚本", nil)
+
+TeleportTab:CreateButton({
+   Name = "点击传送",
+   Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/chano-oss/hanhua/refs/heads/main/Saved_Teleport_Cracked.txt"))()
+   end
+})
+
 -- ========================================
 -- INFO (sem notificações)
 -- ========================================
@@ -219,6 +228,7 @@ InfoTab:CreateParagraph({
 - 无屏幕提示（不影响跳跃操作）
 - 全手动模式（一次开启，直至手动关闭）
 
-由于溺yn汉化
+于溺yn汉化
+qq交流群873920318
 ]]
 })
