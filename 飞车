@@ -1,0 +1,343 @@
+local r0_1 = Instance.new("ScreenGui")
+local r1_1 = Instance.new("Frame")
+local r2_1 = Instance.new("Frame")
+local r3_1 = Instance.new("TextButton")
+local r4_1 = Instance.new("TextBox")
+local r5_1 = Instance.new("TextButton")
+local r6_1 = Instance.new("TextLabel")
+local r7_1 = Instance.new("TextLabel")
+local r8_1 = Instance.new("TextLabel")
+local r9_1 = Instance.new("TextButton")
+local r10_1 = Instance.new("TextLabel")
+local r11_1 = Instance.new("TextButton")
+local r12_1 = Instance.new("TextButton")
+local r13_1 = Instance.new("Frame")
+local r14_1 = Instance.new("TextButton")
+local r15_1 = Instance.new("TextButton")
+
+r0_1.Name = "Flym gui v2"
+r0_1.Parent = game.CoreGui
+r0_1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+r1_1.Name = "Drag"
+r1_1.Parent = r0_1
+r1_1.Active = true
+r1_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r1_1.BorderSizePixel = 0
+r1_1.Draggable = true
+r1_1.Position = UDim2.new(0.482438415, 0, 0.454874992, 0)
+r1_1.Size = UDim2.new(0, 237, 0, 27)
+
+r2_1.Name = "FlyFrame"
+r2_1.Parent = r1_1
+r2_1.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+r2_1.BorderSizePixel = 0
+r2_1.Draggable = true
+r2_1.Position = UDim2.new(-0.00200000009, 0, 0.989000022, 0)
+r2_1.Size = UDim2.new(0, 237, 0, 139)
+
+r3_1.Name = "ddnsfbfwewefe"
+r3_1.Parent = r2_1
+r3_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r3_1.BorderSizePixel = 0
+r3_1.Position = UDim2.new(-0.000210968778, 0, -0.00395679474, 0)
+r3_1.Size = UDim2.new(0, 237, 0, 27)
+r3_1.Font = Enum.Font.SourceSans
+r3_1.Text = "qq交流群:873920318"
+r3_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r3_1.TextScaled = true
+r3_1.TextSize = 14
+r3_1.TextWrapped = true
+
+r4_1.Name = "速度"
+r4_1.Parent = r2_1
+r4_1.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+r4_1.BorderColor3 = Color3.fromRGB(0, 0, 191)
+r4_1.BorderSizePixel = 0
+r4_1.Position = UDim2.new(0.445025861, 0, 0.402877688, 0)
+r4_1.Size = UDim2.new(0, 111, 0, 33)
+r4_1.Font = Enum.Font.SourceSans
+r4_1.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+r4_1.Text = "50"
+r4_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r4_1.TextScaled = true
+r4_1.TextSize = 14
+r4_1.TextWrapped = true
+
+r5_1.Name = "开始飞行"
+r5_1.Parent = r2_1
+r5_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r5_1.BorderSizePixel = 0
+r5_1.Position = UDim2.new(0.0759493634, 0, 0.705797076, 0)
+r5_1.Size = UDim2.new(0, 199, 0, 32)
+r5_1.Font = Enum.Font.SourceSans
+r5_1.Text = "开启"
+r5_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r5_1.TextScaled = true
+r5_1.TextSize = 14
+r5_1.TextWrapped = true
+
+r5_1.MouseButton1Click:Connect(function()
+    r5_1.Visible = false
+    r5_1.Text = "开"
+    r5_1.TextColor3 = Color3.fromRGB(0, 255, 0)
+    r9_1.Visible = true
+    r13_1.Visible = true
+    local BodyVelocity = Instance.new("BodyVelocity", game.Players.LocalPlayer.Character.HumanoidRootPart)
+    local BodyGyro = Instance.new("BodyGyro", game.Players.LocalPlayer.Character.HumanoidRootPart)
+    BodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+    game:GetService("RunService").RenderStepped:Connect(function()
+        BodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+        BodyGyro.D = 5000
+        BodyGyro.P = 100000
+        BodyGyro.CFrame = game.Workspace.CurrentCamera.CFrame
+    end)
+end)
+
+r6_1.Name = "速度"
+r6_1.Parent = r2_1
+r6_1.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+r6_1.BorderSizePixel = 0
+r6_1.Position = UDim2.new(0.0759493634, 0, 0.402877688, 0)
+r6_1.Size = UDim2.new(0, 87, 0, 32)
+r6_1.ZIndex = 0
+r6_1.Font = Enum.Font.SourceSans
+r6_1.Text = "速度:"
+r6_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r6_1.TextScaled = true
+r6_1.TextSize = 14
+r6_1.TextWrapped = true
+
+r7_1.Name = "Stat"
+r7_1.Parent = r2_1
+r7_1.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+r7_1.BorderSizePixel = 0
+r7_1.Position = UDim2.new(0.299983799, 0, 0.239817441, 0)
+r7_1.Size = UDim2.new(0, 85, 0, 15)
+r7_1.Font = Enum.Font.SourceSans
+r7_1.Text = "状态:"
+r7_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r7_1.TextScaled = true
+r7_1.TextSize = 14
+r7_1.TextWrapped = true
+
+r8_1.Name = "Stat2"
+r8_1.Parent = r2_1
+r8_1.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+r8_1.BorderSizePixel = 0
+r8_1.Position = UDim2.new(0.546535194, 0, 0.239817441, 0)
+r8_1.Size = UDim2.new(0, 27, 0, 15)
+r8_1.Font = Enum.Font.SourceSans
+r8_1.Text = "关"
+r8_1.TextColor3 = Color3.fromRGB(255, 0, 0)
+r8_1.TextScaled = true
+r8_1.TextSize = 14
+r8_1.TextWrapped = true
+
+r9_1.Name = "Unfly"
+r9_1.Parent = r2_1
+r9_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r9_1.BorderSizePixel = 0
+r9_1.Position = UDim2.new(0.0759493634, 0, 0.705797076, 0)
+r9_1.Size = UDim2.new(0, 199, 0, 32)
+r9_1.Visible = false
+r9_1.Font = Enum.Font.SourceSans
+r9_1.Text = "关闭"
+r9_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r9_1.TextScaled = true
+r9_1.TextSize = 14
+r9_1.TextWrapped = true
+
+r9_1.MouseButton1Click:Connect(function()
+    r5_1.Visible = true
+    r8_1.Text = "关"
+    r8_1.TextColor3 = Color3.fromRGB(255, 0, 0)
+    wait()
+    r9_1.Visible = false
+    r13_1.Visible = false
+    local BodyVelocity = game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity")
+    BodyVelocity:Destroy()
+    local BodyGyro = game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro")
+    BodyGyro:Destroy()
+end)
+
+r10_1.Name = "飞车"
+r10_1.Parent = r1_1
+r10_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r10_1.BorderSizePixel = 0
+r10_1.Size = UDim2.new(0, 57, 0, 27)
+r10_1.Font = Enum.Font.SourceSans
+r10_1.Text = "飞车"
+r10_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r10_1.TextScaled = true
+r10_1.TextSize = 14
+r10_1.TextWrapped = true
+
+r11_1.Name = "Close"
+r11_1.Parent = r1_1
+r11_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r11_1.BorderSizePixel = 0
+r11_1.Position = UDim2.new(0.875, 0, 0, 0)
+r11_1.Size = UDim2.new(0, 27, 0, 27)
+r11_1.Font = Enum.Font.SourceSans
+r11_1.Text = "X"
+r11_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r11_1.TextScaled = true
+r11_1.TextSize = 14
+r11_1.TextWrapped = true
+
+r11_1.MouseButton1Click:Connect(function()
+    r0_1:Destroy()
+end)
+
+r12_1.Name = "Minimize"
+r12_1.Parent = r1_1
+r12_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r12_1.BorderSizePixel = 0
+r12_1.Position = UDim2.new(0.75, 0, 0, 0)
+r12_1.Size = UDim2.new(0, 27, 0, 27)
+r12_1.Font = Enum.Font.SourceSans
+r12_1.Text = "-"
+r12_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r12_1.TextScaled = true
+r12_1.TextSize = 14
+r12_1.TextWrapped = true
+
+local Mini = function()
+    if r12_1.Text == "-" then
+        r12_1.Text = "+"
+        r2_1.Visible = false
+    end
+    if r12_1.Text == "+" then
+        r12_1.Text = "-"
+        r2_1.Visible = true
+    end
+end
+
+r12_1.MouseButton1Click:Connect(Mini)
+
+r13_1.Name = "Fly on"
+r13_1.Parent = r0_1
+r13_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+r13_1.BorderSizePixel = 0
+r13_1.Position = UDim2.new(0.117647067, 0, 0.550284624, 0)
+r13_1.Size = UDim2.new(0.148000002, 0, 0.314999998, 0)
+r13_1.Visible = false
+r13_1.Active = true
+r13_1.Draggable = true
+
+r14_1.Name = "W"
+r14_1.Parent = r13_1
+r14_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r14_1.BorderSizePixel = 0
+r14_1.Position = UDim2.new(0.134719521, 0, 0.0152013302, 0)
+r14_1.Size = UDim2.new(0.708999991, 0, 0.499000013, 0)
+r14_1.Font = Enum.Font.SourceSans
+r14_1.Text = "^"
+r14_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r14_1.TextScaled = true
+r14_1.TextSize = 14
+r14_1.TextWrapped = true
+
+r14_1.TouchLongPress:Connect(function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * 0
+end)
+
+r14_1.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * 0
+end)
+
+r15_1.Name = "S"
+r15_1.Parent = r13_1
+r15_1.BackgroundColor3 = Color3.fromRGB(0, 150, 191)
+r15_1.BorderSizePixel = 0
+r15_1.Position = UDim2.new(0.134000003, 0, 0.479999989, 0)
+r15_1.Rotation = 180
+r15_1.Size = UDim2.new(0.708999991, 0, 0.499000013, 0)
+r15_1.Font = Enum.Font.SourceSans
+r15_1.Text = "^"
+r15_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r15_1.TextScaled = true
+r15_1.TextSize = 14
+r15_1.TextWrapped = true
+
+r15_1.TouchLongPress:Connect(function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * 0
+end)
+
+r15_1.MouseButton1Click:Connect(function()
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -r4_1.Text
+    wait(0.1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * 0
+end)
