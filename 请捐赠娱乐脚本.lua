@@ -705,7 +705,7 @@ CreatorLabel.BackgroundTransparency = 1
 CreatorLabel.Position = UDim2.new(0, 0, 0.8, 0)
 CreatorLabel.Size = UDim2.new(1, 0, 0, 20)
 CreatorLabel.Font = Enum.Font.Gotham
-CreatorLabel.Text = "bilbil@Maokou_QwQ"
+CreatorLabel.Text = "祝你生活愉快💀"
 CreatorLabel.TextColor3 = Color3.new(1, 1, 1)
 CreatorLabel.TextSize = 14
 
